@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: 'Ubuntu', sans-serif;
 }
 body {
     background-color: #098890;
@@ -19,6 +22,7 @@ body {
     height: 400px;
     display: flex;
     justify-content: center;
+    border-radius: 8px;
 }
 .login {
     padding: 10px 10px 10px 10px;
@@ -37,5 +41,9 @@ body {
     background-color: #D9D9D9;
 
     outline: none;
-    
+}
+
+a {
+    text-decoration: none;
+    color: dodgerblue;
 }
