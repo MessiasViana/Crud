@@ -1,11 +1,9 @@
 function register(name, email, password) {
     let message = '';
 
-    const user = {
-        name,
-        email,
-        password
-    };
+    user.name = name;
+    user.email = email;
+    user.password = password;
 
     let accounts = JSON.parse(localStorage.getItem('accounts'));
     if(accounts === null) {
@@ -30,6 +28,8 @@ function register(name, email, password) {
     return 'cadastrado';
 }
 
-function login(email, password) { }
+function login(email, password) {
+    console.log(JSON.parse(localStorage.getItem('users')));
+}
 
 export { login, register };

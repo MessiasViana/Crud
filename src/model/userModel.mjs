@@ -1,7 +1,7 @@
-class User {
-    name;
-    email;
-    password;
+const user = {
+    name,
+    email,
+    password
 };
 
-export default User;
+export default user;
