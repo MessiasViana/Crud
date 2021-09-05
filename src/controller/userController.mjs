@@ -45,7 +45,8 @@ function login(email, password) {
         if(account.email === email && account.password === password) {
             message = 'logou';
         }
-    })
+    });
+
     return message
 }
 
