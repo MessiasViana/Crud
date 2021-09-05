@@ -10,13 +10,9 @@
 <body>
     <div class="screen">
         <div class="login">
-            <h1>Crie uma conta</h1>
+            <h1>Logue na sua conta</h1>
 
             <form method="POST" class="validador">
-                <label>
-                    Seu nome:<br/>
-                    <input type="text" name="name" id="name" autocomplete="off" required/>
-                </label>
                 <label>
                     Seu e-mail:<br/>
                     <input type="email" name="email" id="email" autocomplete="off" required/>
@@ -26,17 +22,17 @@
                     <input type="password" id="password" name="password" minlength="3" required/>
                 </label>
                 <label>
-                    <button id="register">Cadastrar</button>
+                    <button id="login">Logar</button>
                 </label>
             </form>
 
             <div>
-                Já tem uma conta? <a href="">Faça o Login</a>
+                Ainda não tem uma conta? <a href="register.html">Crie uma agora!</a>
             </div>
         </div>
     </div>
 
     <script type="module" src="../src/main.mjs"></script>
-    <script type="module" src="../src/scripts/register/index.mjs"></script>
+    <script type="module" src="../src/scripts/login/index.mjs"></script>
 </body>
 </html>

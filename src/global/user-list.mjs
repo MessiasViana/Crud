@@ -1,3 +1,3 @@
-const accounts = [];
+let accounts = [];
 
 export default accounts;

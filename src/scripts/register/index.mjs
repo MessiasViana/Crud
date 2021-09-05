@@ -1,5 +1,4 @@
-import accounts from '../../global/user-list.mjs';
-import { login, register } from '../../controller/userController.mjs';
+import { register } from '../../controller/userController.mjs';
 
 const name = document.getElementById('name');
 const email = document.getElementById('email');
@@ -13,8 +12,8 @@ btnRegister.addEventListener('click', (e) => {
     if (rawResponse !== 'cadastrado') {
         alert(rawResponse);
     } else {
-        alert('Cadastrado com sucesso!');
+        alert(rawResponse);
+
+        // window.location = '../../../public/login.html';
     }
 });
-
-console.log(accounts)

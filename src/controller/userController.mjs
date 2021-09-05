@@ -1,29 +1,27 @@
-import accounts from '../global/user-list.mjs';
+import user from '../model/userModel.mjs';
 
 function register(name, email, password) {
     let message = '';
 
-    const user = {
-        name,
-        email,
-        password
-    };
+    user.name = name;
+    user.email = email;
+    user.password = password;
 
-    accounts.forEach(account => {
-        if (account.email === email) {
-            message = 'Já existe um usuário com este e-mail... por favor inserir outro!';
-        }
-    });
+    const local = JSON.parse(localStorage.getItem('users'));
 
-    if (message !== '') {
-        return message;
+    if (local !== null) {
+        const accounts = [];
+
+        local.forEach(account => {
+            accounts.punsh(account);
+        });
     }
-
-    accounts.push(user);
 
     return 'cadastrado';
 }
 
-function login(email, password) { }
+function login(email, password) {
+    console.log(JSON.parse(localStorage.getItem('users')));
+}
 
 export { login, register };
