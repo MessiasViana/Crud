@@ -15,6 +15,6 @@ btnRegister.addEventListener('click', (e) => {
     } else {
         alert(rawResponse);
 
-        // window.location = '../../../public/login.html';
+        window.location = '../../../public/login.html';
     }
 });

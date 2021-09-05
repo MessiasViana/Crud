@@ -6,6 +6,13 @@ const btnLogin = document.getElementById('login');
 
 btnLogin.addEventListener('click', (e) => {
     e.preventDefault();
-    login(email.value, password.value);
+    const auth = login(email.value, password.value);
+    if (auth === 'erro') {
+        alert("Login errado!!!")
+    }  else { 
+        alert("Logou!!!!!")
+    }
+
 })
+
 

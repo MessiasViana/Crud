@@ -38,7 +38,16 @@ function register(name, email, password) {
 }
 
 function login(email, password) {
-    console.log(JSON.parse(localStorage.getItem('users')));
+    let message = 'erro';
+    const accountsSaves = JSON.parse(localStorage.getItem('accounts'));
+
+    accountsSaves.forEach(account => {
+        if(account.email === email && account.password === password) {
+            message = 'logou';
+        }
+    })
+    return message
 }
+
 
 export { login, register };
