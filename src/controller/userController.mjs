@@ -10,6 +10,7 @@ function register(name, email, password) {
     let accounts = JSON.parse(localStorage.getItem('accounts'));
     if(accounts === null) {
         accounts = user;
+        accounts = [accounts];
     } else { 
         accounts = Array.from(accounts);
         if(accounts.length > 0) {
@@ -31,7 +32,7 @@ function register(name, email, password) {
         accounts.push(user);
     }
 
-    localStorage.setItem('accounts', JSON.stringify([accounts]));
+    localStorage.setItem('accounts', JSON.stringify(accounts));
 
     return 'cadastrado';
 }
