@@ -1,3 +1,5 @@
+import user from '../model/userModel.mjs';
+
 function register(name, email, password) {
     let message = '';
 

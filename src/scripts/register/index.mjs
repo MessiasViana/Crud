@@ -7,6 +7,7 @@ const btnRegister = document.getElementById('register');
 
 btnRegister.addEventListener('click', (e) => {
     e.preventDefault();
+    console.log(name.value)
     const rawResponse = register(name.value, email.value, password.value);
 
     if (rawResponse !== 'cadastrado') {
