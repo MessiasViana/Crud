@@ -10,13 +10,19 @@ function register(name, email, password) {
     let accounts = JSON.parse(localStorage.getItem('accounts'));
     if(accounts === null) {
         accounts = user;
-    } else {
+    } else { 
         accounts = Array.from(accounts);
-        accounts.forEach(account => {
-            if (account.email === email) {
+        if(accounts.length > 0) {
+            accounts.forEach(account => {
+                if (account.email === email) {
+                    message = 'Já existe um usuário com este e-mail... por favor inserir outro!';
+                }
+            });
+        } else { console.log(accounts)
+            if (accounts[0].email === email) {
                 message = 'Já existe um usuário com este e-mail... por favor inserir outro!';
             }
-        });
+        }
 
         if (message !== '') {
             return message;
@@ -25,7 +31,7 @@ function register(name, email, password) {
         accounts.push(user);
     }
 
-    localStorage.setItem('accounts', JSON.stringify(accounts));
+    localStorage.setItem('accounts', JSON.stringify([accounts]));
 
     return 'cadastrado';
 }
